@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ButtonUtils="*res://Scripts/Utility/ButtonUtils.gd"
+AllPlayers="*res://Scenes/AllPlayers.tscn"
 
 [display]
 

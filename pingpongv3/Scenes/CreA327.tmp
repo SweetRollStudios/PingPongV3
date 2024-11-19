@@ -85,14 +85,3 @@ offset_bottom = 0.0
 text = "Back"
 metadata/SceneToChangeToPath = "res://Scenes/Main.tscn"
 metadata/_edit_use_anchors_ = true
-
-[node name="PlayerList" type="ItemList" parent="CanvasLayer/CreatePlayerPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0666667
-anchor_top = 0.118519
-anchor_right = 0.266667
-anchor_bottom = 0.414815
-select_mode = 1
-item_count = 1
-metadata/_edit_use_anchors_ = true
