@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="PingPongV3"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ButtonUtils="*res://Scripts/Utility/ButtonUtils.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 

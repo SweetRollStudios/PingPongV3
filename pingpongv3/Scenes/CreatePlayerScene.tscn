@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dmsdq00ia6d7d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NicknameTextField" type="TextEdit" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316667
+anchor_top = 0.0592593
+anchor_right = 0.666667
+anchor_bottom = 0.118519
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter Nickname"
+metadata/_edit_use_anchors_ = true
+
+[node name="AgeTextField" type="TextEdit" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316667
+anchor_top = 0.177778
+anchor_right = 0.666667
+anchor_bottom = 0.237037
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter Age"
+metadata/_edit_use_anchors_ = true
+
+[node name="FnameTextField" type="TextEdit" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316667
+anchor_top = 0.296296
+anchor_right = 0.666667
+anchor_bottom = 0.355556
+offset_right = -6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter Firstname"
+metadata/_edit_use_anchors_ = true
+
+[node name="LnameTextField" type="TextEdit" parent="CanvasLayer/Panel"]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 1280.0
+offset_bottom = 512.0
+placeholder_text = "Enter Lastname"
+
+[node name="CreateNewPlayer" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 576.0
+offset_right = 1280.0
+offset_bottom = 640.0
+text = "Finalize New Player"
