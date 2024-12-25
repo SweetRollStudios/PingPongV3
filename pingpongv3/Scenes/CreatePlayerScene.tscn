@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmsdq00ia6d7d"]
 
 [ext_resource type="Script" path="res://Scripts/Button/CreateNewPlayer.gd" id="1_kvk02"]
-[ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/change_scene_button.tscn" id="1_mlsal"]
+[ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/Buttons/change_scene_button.tscn" id="1_mlsal"]
 
 [node name="Node2D" type="Node2D"]
 

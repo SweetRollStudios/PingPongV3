@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b0s3k4o2q7g61"]
 
-[ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/change_scene_button.tscn" id="1_wu05c"]
+[ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/Buttons/change_scene_button.tscn" id="1_wu05c"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,14 +10,16 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="SendToCreateNewPlayerButton" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.389583
+anchor_left = 0.4
 anchor_top = 0.414815
-anchor_right = 0.610417
+anchor_right = 0.6
 anchor_bottom = 0.585185
 offset_top = 3.05176e-05
 offset_right = 0.0
@@ -27,3 +29,15 @@ grow_vertical = 2
 text = "Create New Player"
 metadata/SceneToChangeToPath = "res://Scenes/CreatePlayerScene.tscn"
 metadata/_edit_use_anchors_ = true
+
+[node name="SendToStartGame" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
+layout_mode = 0
+anchor_left = 0.4
+anchor_top = 0.237037
+anchor_right = 0.6
+anchor_bottom = 0.407407
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Start Game"
+metadata/_edit_use_anchors_ = true
+metadata/SceneToChangeToPath = "res://Scenes/Game.tscn"
