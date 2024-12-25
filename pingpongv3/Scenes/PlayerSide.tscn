@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgflm2vwp10yo"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerHandler.gd" id="1_us5uw"]
+[ext_resource type="Script" path="res://Scripts/Control/PlayerHandler.gd" id="1_us5uw"]
 
 [node name="Control" type="ColorRect"]
 anchors_preset = -1
@@ -15,45 +15,92 @@ script = ExtResource("1_us5uw")
 
 [node name="NameField" type="TextEdit" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 192.0
-offset_top = -348.0
-offset_right = -192.0
-offset_bottom = -220.0
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.177778
+anchor_right = 0.8
+anchor_bottom = 0.296296
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreField" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.356
-anchor_right = 0.8
-anchor_bottom = 0.459
-offset_top = -0.480011
-offset_bottom = 0.279968
-theme_override_font_sizes/font_size = 72
+anchor_left = 0.333333
+anchor_top = 0.325926
+anchor_right = 0.666667
+anchor_bottom = 0.487963
+theme_override_font_sizes/font_size = 128
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="IncreaseScoreButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 568.0
-offset_top = 576.0
-offset_right = 642.0
-offset_bottom = 640.0
-text = "Increase"
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.533333
+anchor_right = 0.733333
+anchor_bottom = 0.592593
+text = "Increase Score"
+metadata/_edit_use_anchors_ = true
 
 [node name="DecreaseScoreButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.266667
+anchor_top = 0.533333
+anchor_right = 0.398958
+anchor_bottom = 0.592593
+text = "Decrease Score"
+metadata/_edit_use_anchors_ = true
+
+[node name="WinField" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516667
+anchor_top = 0.0740741
+anchor_right = 0.658333
+anchor_bottom = 0.137963
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="WinsText" type="Label" parent="."]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 576.0
-offset_right = 400.0
-offset_bottom = 640.0
-text = "Decrease"
+anchor_left = 0.4
+anchor_top = 0.0592593
+anchor_right = 0.533333
+anchor_bottom = 0.155556
+theme_override_font_sizes/font_size = 41
+text = "Wins:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DecreaseWinsButton" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.266667
+anchor_top = 0.651852
+anchor_right = 0.4
+anchor_bottom = 0.711111
+text = "Decrease Wins"
+metadata/_edit_use_anchors_ = true
+
+[node name="IncreaseWinsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.651852
+anchor_right = 0.733333
+anchor_bottom = 0.711111
+text = "Increase Wins"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="IncreaseScoreButton" to="." method="_on_increase_score_button_button_up"]
 [connection signal="button_up" from="DecreaseScoreButton" to="." method="_on_decrease_score_button_button_up"]
+[connection signal="button_up" from="DecreaseWinsButton" to="." method="_on_decrease_wins_button_button_up"]
+[connection signal="button_up" from="IncreaseWinsButton" to="." method="_on_increase_wins_button_button_up"]

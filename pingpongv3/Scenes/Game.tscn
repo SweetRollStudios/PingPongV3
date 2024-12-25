@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bulko4dvr0x40"]
 
 [ext_resource type="PackedScene" uid="uid://bgflm2vwp10yo" path="res://Scenes/PlayerSide.tscn" id="1_crjyo"]
-[ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_kkolv"]
+[ext_resource type="Script" path="res://Scripts/Control/GameController.gd" id="1_kkolv"]
 [ext_resource type="Script" path="res://Scenes/SwitchSidesButtonHandler.gd" id="3_bbeg0"]
 [ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/Buttons/change_scene_button.tscn" id="4_jg0mx"]
 
