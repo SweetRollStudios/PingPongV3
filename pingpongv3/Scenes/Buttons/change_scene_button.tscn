@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Button/SceneChangeButton.gd" id="1_uub7k"]
 
-[node name="ChangeSceneButton" type="Button"]
+[node name="ChangeSceneButton" type="TextureButton"]
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("1_uub7k")

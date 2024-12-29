@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0s3k4o2q7g61"]
+[gd_scene load_steps=5 format=3 uid="uid://b0s3k4o2q7g61"]
 
 [ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/Buttons/change_scene_button.tscn" id="1_wu05c"]
+[ext_resource type="FontFile" uid="uid://mbdgiob7hoy2" path="res://Resources/04B_30__.TTF" id="2_6o6n3"]
+[ext_resource type="Texture2D" uid="uid://bp4knwmislesw" path="res://Resources/Individual Icons/silver-S.png" id="2_7s36u"]
+[ext_resource type="Texture2D" uid="uid://bd5qwp4421qfg" path="res://Resources/Individual Icons/silver-S-pushed.png" id="3_43sgc"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,27 +20,52 @@ metadata/_edit_use_anchors_ = true
 [node name="SendToCreateNewPlayerButton" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.4
-anchor_top = 0.414815
-anchor_right = 0.6
-anchor_bottom = 0.585185
+anchor_left = 0.866667
+anchor_top = 0.888889
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = 3.05176e-05
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Create New Player"
 metadata/SceneToChangeToPath = "res://Scenes/CreatePlayerScene.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="SendToStartGame" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
-layout_mode = 0
-anchor_left = 0.4
-anchor_top = 0.237037
-anchor_right = 0.6
-anchor_bottom = 0.407407
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.459259
+anchor_right = 0.5375
+anchor_bottom = 0.6
 offset_right = 0.0
 offset_bottom = 0.0
-text = "Start Game"
+texture_normal = ExtResource("2_7s36u")
+texture_pressed = ExtResource("3_43sgc")
+stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 metadata/SceneToChangeToPath = "res://Scenes/Game.tscn"
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 64.0
+offset_right = 1536.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 45
+text = "Press S Button Below to Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/MainMenuPanel"]
+offset_left = 608.0
+offset_top = 960.0
+offset_right = 1349.0
+offset_bottom = 1064.0
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 30
+text = "(Everyone knows S means Start)"
+horizontal_alignment = 1
+vertical_alignment = 1
