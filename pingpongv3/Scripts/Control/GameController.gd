@@ -27,8 +27,6 @@ func _on_restart_game_button_button_up() -> void:
 	playerContainer.move_child($CanvasLayer/HBoxContainer/Player2,1)
 	$CanvasLayer/HBoxContainer/Player1/ScoreField.text = str(0)
 	$CanvasLayer/HBoxContainer/Player2/ScoreField.text = str(0)
-	$CanvasLayer/HBoxContainer/Player1/NameField.text = ""
-	$CanvasLayer/HBoxContainer/Player2/NameField.text = ""
 	$CanvasLayer/HBoxContainer/Player1/WinField.text = str(0)
 	$CanvasLayer/HBoxContainer/Player2/WinField.text = str(0)
 

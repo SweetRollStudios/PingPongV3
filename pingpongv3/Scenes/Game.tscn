@@ -27,10 +27,12 @@ theme_override_constants/separation = 0
 [node name="Player1" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_crjyo")]
 layout_mode = 2
 metadata/PlayerColor = Color(0.211378, 0.474405, 1, 1)
+metadata/PlayerVal = 1
 
 [node name="Player2" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_crjyo")]
 layout_mode = 2
 metadata/PlayerColor = Color(0.89298, 0, 0.275608, 1)
+metadata/PlayerVal = 2
 
 [node name="SwitchSidesButton" type="Button" parent="CanvasLayer"]
 anchors_preset = -1
@@ -67,13 +69,15 @@ metadata/SceneToChangeToPath = "res://Scenes/Main.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="ResetScoreButton" type="Button" parent="CanvasLayer"]
-offset_left = 768.0
-offset_top = 1024.0
-offset_right = 1152.0
-offset_bottom = 1080.0
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.948148
+anchor_right = 0.6
+anchor_bottom = 1.0
 theme_override_fonts/font = ExtResource("3_dheht")
 theme_override_font_sizes/font_size = 30
 text = "Reset Score"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="CanvasLayer/SwitchSidesButton" to="." method="_on_switch_sides_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/RestartGameButton" to="." method="_on_restart_game_button_button_up"]

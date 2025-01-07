@@ -10,15 +10,18 @@ config_version=5
 
 [application]
 
-config/name="PingPongV3"
+config/name="Ping Pong Scorer"
+config/version="1.0.0"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Resources/ping-pong-rackets-and-ball-collection-cartoon-icon-table-tennis-sport-equipment-icon-concept-isolated-illustration-free-vector.png"
+config/windows_native_icon="res://Resources/pong ico.ico"
 
 [autoload]
 
 ButtonUtils="*res://Scripts/Utility/ButtonUtils.gd"
 AllPlayers="*res://Scenes/AllPlayers.tscn"
+GlobalVars="*res://Scripts/Utility/GlobalVars.gd"
 
 [display]
 
