@@ -18,7 +18,7 @@ size_flags_vertical = 3
 color = Color(0.520648, 0.0503739, 0.156565, 1)
 script = ExtResource("1_us5uw")
 
-[node name="NameField" type="TextEdit" parent="."]
+[node name="NameField" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
@@ -29,6 +29,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_whrgl")
 theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ScoreField" type="Label" parent="."]

@@ -1,8 +1,13 @@
 extends ColorRect
 
 func _ready() -> void:
-	var playerColor : Color = get_meta("PlayerColor")
-	self.set_color(playerColor)
+	if(self.get_meta("PlayerVal")==1):
+		self.set_color(GlobalVars.player1Color)
+		$NameField.text = GlobalVars.player1Name
+	else:
+		self.set_color(GlobalVars.player2Color)
+		$NameField.text = GlobalVars.player2Name
+	
 	$ScoreField.text = str(0)
 	$WinField.text = str(0)
 	

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0s3k4o2q7g61"]
+[gd_scene load_steps=7 format=3 uid="uid://b0s3k4o2q7g61"]
 
 [ext_resource type="PackedScene" uid="uid://cxkguej31k3x5" path="res://Scenes/Buttons/change_scene_button.tscn" id="1_wu05c"]
 [ext_resource type="FontFile" uid="uid://mbdgiob7hoy2" path="res://Resources/04B_30__.TTF" id="2_6o6n3"]
 [ext_resource type="Texture2D" uid="uid://bp4knwmislesw" path="res://Resources/Individual Icons/silver-S.png" id="2_7s36u"]
 [ext_resource type="Texture2D" uid="uid://bd5qwp4421qfg" path="res://Resources/Individual Icons/silver-S-pushed.png" id="3_43sgc"]
+[ext_resource type="Script" path="res://Scripts/Button/ColorPickerButtonScript.gd" id="5_ps4oi"]
+[ext_resource type="Script" path="res://Scripts/Button/PlayerTextButton.gd" id="6_t4wfh"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,27 +19,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="SendToCreateNewPlayerButton" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.866667
-anchor_top = 0.888889
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.05176e-05
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/SceneToChangeToPath = "res://Scenes/CreatePlayerScene.tscn"
-metadata/_edit_use_anchors_ = true
-
 [node name="SendToStartGame" parent="CanvasLayer/MainMenuPanel" instance=ExtResource("1_wu05c")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.45
+anchor_left = 0.454167
 anchor_top = 0.459259
-anchor_right = 0.5375
+anchor_right = 0.541667
 anchor_bottom = 0.6
 offset_right = 0.0
 offset_bottom = 0.0
@@ -49,23 +36,111 @@ metadata/SceneToChangeToPath = "res://Scenes/Game.tscn"
 
 [node name="Label" type="Label" parent="CanvasLayer/MainMenuPanel"]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 64.0
-offset_right = 1536.0
-offset_bottom = 288.0
+anchor_left = 0.175
+anchor_top = 0.0592593
+anchor_right = 0.828646
+anchor_bottom = 0.266667
 theme_override_fonts/font = ExtResource("2_6o6n3")
 theme_override_font_sizes/font_size = 45
-text = "Press S Button Below to Start"
+text = "Press The S Button Below to Start"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="CanvasLayer/MainMenuPanel"]
-offset_left = 608.0
-offset_top = 960.0
-offset_right = 1349.0
-offset_bottom = 1064.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.304167
+anchor_top = 0.888889
+anchor_right = 0.690104
+anchor_bottom = 0.985185
 theme_override_fonts/font = ExtResource("2_6o6n3")
 theme_override_font_sizes/font_size = 30
 text = "(Everyone knows S means Start)"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1TextLabel" type="Label" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0333333
+anchor_top = 0.274074
+anchor_right = 0.415625
+anchor_bottom = 0.407407
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 33
+text = "Player One's Name and Color"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player2TextLabel" type="Label" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.583333
+anchor_top = 0.274074
+anchor_right = 0.966667
+anchor_bottom = 0.407407
+offset_right = -2.0
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 33
+text = "Player Two's Name and Color"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1ColorPickerItem" type="ColorPickerButton" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 0
+anchor_left = 0.133333
+anchor_top = 0.592593
+anchor_right = 0.333333
+anchor_bottom = 0.711111
+color = Color(0.566588, 0.165186, 0.549356, 1)
+script = ExtResource("5_ps4oi")
+metadata/_edit_use_anchors_ = true
+metadata/PlayerVal = 1
+
+[node name="Player2ColorPicker" type="ColorPickerButton" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.666667
+anchor_top = 0.592593
+anchor_right = 0.866667
+anchor_bottom = 0.711111
+color = Color(0.566588, 0.165186, 0.549356, 1)
+script = ExtResource("5_ps4oi")
+metadata/_edit_use_anchors_ = true
+metadata/PlayerVal = 2
+
+[node name="Player1Text" type="TextEdit" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 0
+anchor_left = 0.1
+anchor_top = 0.414815
+anchor_right = 0.366667
+anchor_bottom = 0.533333
+offset_top = 3.05176e-05
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 40
+script = ExtResource("6_t4wfh")
+metadata/_edit_use_anchors_ = true
+metadata/PlayerVal = 1
+
+[node name="Player2Text" type="TextEdit" parent="CanvasLayer/MainMenuPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.633333
+anchor_top = 0.414815
+anchor_right = 0.9
+anchor_bottom = 0.533333
+offset_top = 3.05176e-05
+theme_override_fonts/font = ExtResource("2_6o6n3")
+theme_override_font_sizes/font_size = 40
+script = ExtResource("6_t4wfh")
+metadata/_edit_use_anchors_ = true
+metadata/PlayerVal = 2
+
+[connection signal="popup_closed" from="CanvasLayer/MainMenuPanel/Player1ColorPickerItem" to="CanvasLayer/MainMenuPanel/Player1ColorPickerItem" method="_on_popup_closed"]
+[connection signal="popup_closed" from="CanvasLayer/MainMenuPanel/Player2ColorPicker" to="CanvasLayer/MainMenuPanel/Player1ColorPickerItem" method="_on_player_2_color_picker_popup_closed"]
+[connection signal="text_changed" from="CanvasLayer/MainMenuPanel/Player1Text" to="CanvasLayer/MainMenuPanel/Player1Text" method="_on_text_changed"]
+[connection signal="text_changed" from="CanvasLayer/MainMenuPanel/Player2Text" to="CanvasLayer/MainMenuPanel/Player1Text" method="_on_player_2_text_text_changed"]
