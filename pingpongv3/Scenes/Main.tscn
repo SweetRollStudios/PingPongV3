@@ -47,20 +47,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="CanvasLayer/MainMenuPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.304167
-anchor_top = 0.888889
-anchor_right = 0.690104
-anchor_bottom = 0.985185
-theme_override_fonts/font = ExtResource("2_6o6n3")
-theme_override_font_sizes/font_size = 30
-text = "(Everyone knows S means Start)"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [node name="Player1TextLabel" type="Label" parent="CanvasLayer/MainMenuPanel"]
 layout_mode = 1
 anchors_preset = -1
@@ -96,7 +82,7 @@ anchor_left = 0.133333
 anchor_top = 0.592593
 anchor_right = 0.333333
 anchor_bottom = 0.711111
-color = Color(0.566588, 0.165186, 0.549356, 1)
+color = Color(0.12973, 0.385177, 0.57558, 1)
 script = ExtResource("5_ps4oi")
 metadata/_edit_use_anchors_ = true
 metadata/PlayerVal = 1
@@ -108,7 +94,7 @@ anchor_left = 0.666667
 anchor_top = 0.592593
 anchor_right = 0.866667
 anchor_bottom = 0.711111
-color = Color(0.566588, 0.165186, 0.549356, 1)
+color = Color(0.69747, 0, 0.0759194, 1)
 script = ExtResource("5_ps4oi")
 metadata/_edit_use_anchors_ = true
 metadata/PlayerVal = 2
