@@ -16,10 +16,10 @@ func _process(delta: float) -> void:
 	pass
 
 func _update_scores() -> void:
-	var filename = "user://left_score.txt" if self.get_meta("PlayerVal")==1 else "user://right_score.txt"
-	var scorefile = FileAccess.open(filename, FileAccess.WRITE)
-	var scoreField : Label = $ScoreField
-	scorefile.store_string(scoreField.text)
+	var player : int = self.get_meta("PlayerVal")
+	var name = GlobalVars.player1Name if player==1 else GlobalVars.player2Name
+	var amLeft = player==(2 if GlobalVars.isSwapped else 1)
+	GlobalVars.updatePlayer(amLeft, $ScoreField.text, name)
 
 func _on_increase_score_button_button_up() -> void:
 	var scoreField : Label = $ScoreField
